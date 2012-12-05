@@ -17,4 +17,6 @@ Steps
         a. create 'foo', {NAME => 'cf'} 
     3. hadoop fs -copyFromLocal 1.csv
     4. pig test.pig
+    5. hbase shell
+        a. scan 'foo' 
 
