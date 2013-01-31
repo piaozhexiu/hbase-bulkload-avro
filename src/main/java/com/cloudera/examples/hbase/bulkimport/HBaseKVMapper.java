@@ -2,23 +2,12 @@ package com.cloudera.examples.hbase.bulkimport;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.util.List;
-import java.util.Locale;
 
-import org.apache.avro.Schema;
-import org.apache.avro.Schema.Field;
 import org.apache.avro.generic.GenericData.Record;
-import org.apache.avro.generic.GenericDatumReader;
 import org.apache.avro.mapred.AvroWrapper;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.Writable;
-import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapreduce.Mapper;
 
 public class HBaseKVMapper<IN> extends Mapper<AvroWrapper<IN>, NullWritable, ImmutableBytesWritable, KeyValue> {
